@@ -114,6 +114,7 @@ document.getElementById("peopleForm").addEventListener("submit", function (e) {
         localStorage.setItem("allPersons", JSON.stringify(newData));
         getAllPerson()
     }
+    document.getElementById("peopleForm").reset();
 });
 
 function deleteAllData() {
