@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Constructor Assignment</title>
+</head>
+
+<body>
+    <h1>Object Assignment</h1>
+    <h3>Question 4: </h3>
+    <h4>List of People Details</h4>
+    <form id="peopleForm" class="people-form">
+        <label for="personName"> Name:
+            <input type="text" name="personName" id="personName" />
+        </label>
+        <br />
+        Gender:
+        <br />
+        <input type="radio" name="gender" value="Male" id="personGender1" /> Male
+        <br />
+        <input type="radio" name="gender" value="Female" id="personGender2" /> Femaile
+        <br />
+        <label for="personName"> Address
+            <br />
+            <textarea  name="personAddress" id="personAddress"></textarea>
+        </label>
+        <br />
+        <label for="personEducation"> Education:
+            <br />
+           <select name="personEducation" id="personEducation">
+               <option value="No Education" selected>No Education</option>
+               <option value="Matriculation">Matriculation</option>
+               <option value="Intermediate">Intermediate</option>
+               <option value="Bachlors">Bachlors</option>
+               <option value="Masters">Masters</option>
+           </select>
+        </label>
+        <br />
+        <label for="personProfession"> Pofession:
+            <br />
+           <select name="personProfession" id="personProfession">
+               <option value="No Profession" selected>No Pofession</option>
+               <option value="Matriculation">Matriculation</option>
+               <option value="Intermediate">Intermediate</option>
+               <option value="Bachlors">Bachlors</option>
+               <option value="Masters">Masters</option>
+           </select>
+        </label>
+        <br />
+        
+        <button type="submit">Add</button>
+        <button type="button" onclick="deleteAllData();">Delete All Data</button>
+    </form>
+    <div class="people-list">
+        <table border="1" id="peopleTable">
+            <tr>
+                <th>Sno</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Education</th>
+                <th>Profession</th>
+                <th>Action</th>
+            </tr>
+        </table>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
