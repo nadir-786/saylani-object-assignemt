@@ -81,27 +81,27 @@ function Person(Name, gender, address, education, profession) {
 
 document.getElementById("peopleForm").addEventListener("submit", function (e) {
     e.preventDefault();
-    let Name = document.getElementById("personName").value;
-    let genderMale = document.getElementById("personGender1").checked;
-    let genderFemale = document.getElementById("personGender1").checked;
+    let Name = document.getElementById("personName");
+    let genderMale = document.getElementById("personGender1");
+    let genderFemale = document.getElementById("personGender2");
     let gender;
 
-    let address = document.getElementById("personAddress").value;
-    let education = document.getElementById("personEducation").value;
-    let profession = document.getElementById("personProfession").value;
-    if (Name === "" || address === "" || education === "" || profession === "") {
+    let address = document.getElementById("personAddress");
+    let education = document.getElementById("personEducation");
+    let profession = document.getElementById("personProfession");
+    if (Name.value === "" || address.value === "" || education.value === "" || profession.value === "") {
         alert("Pleas Fill Out All Fields")
         return;
     }
-    if (genderMale) {
+    if (genderMale.checked) {
         gender = "male";
-    } else if (genderFemale) {
+    } else if (genderFemale.checked) {
         gender = "female";
     } else {
         alert("Please Select a Gender");
         return;
     }
-    let newPerson = new Person(Name, gender, address, education, profession);
+    let newPerson = new Person(Name.value, gender, address.value, education.value, profession.value);
     let previousData = localStorage.getItem("allPersons");
     if (previousData) {
         let prevData = JSON.parse(previousData);
